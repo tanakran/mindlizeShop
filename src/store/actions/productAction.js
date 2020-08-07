@@ -1,28 +1,28 @@
 export const addProduct = (dataset) => {
     return (dispatch, getState, {  getFirebase,getFirestore }) => {
         
-        const firestore = getFirestore();
-        /*firestore.collection("product").get().then(function(querySnapshot) {
+        /*const firestore = getFirestore();
+        firestore.collection("product").get().then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
                 
-                if(!doc.data().pd_price_stock){
+                //if(!doc.data().pd_price_stock){
                     if(doc.data().pd_price==120){
                         doc.ref.update({
-                            pd_price_stock:140,
-                            pd_in_stock:0,
+                            pd_price:110,
+                            pd_price_stock:129,
                         });
                     }else if(doc.data().pd_price==260){
                         doc.ref.update({
-                            pd_price_stock:280,
-                            pd_in_stock:0,
+                            pd_price:250,
+                            pd_price_stock:260,
                         });
                     }else{
                         doc.ref.update({
+                            pd_price:140,
                             pd_price_stock:150,
-                            pd_in_stock:0,
                         });
                     }
-                }
+                //}
             });
         });*/
         firestore.collection("product").add({
